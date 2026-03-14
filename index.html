@@ -548,7 +548,7 @@
     /* ─── RESPONSIVE ─── */
     @media (max-width: 960px) {
       .hero-inner { grid-template-columns: 1fr; }
-      .hero-photo { display: none; }
+      .hero-photo { display: block; max-width: 320px; margin: 0 auto; }
       .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
     }
 
@@ -786,7 +786,7 @@
           If you have something in mind, reach out — I respond fast.
         </p>
         <div class="contact-socials">
-          <a href="mailto:mohamoud@example.com" class="social-link">📧 mohamoud@example.com</a>
+          <a href="mailto:maxamudlaki12345@gmail.com" class="social-link">📧 maxamudlaki12345@gmail.com</a>
           <a href="https://github.com/" target="_blank" rel="noopener" class="social-link">🐙 GitHub</a>
           <a href="https://linkedin.com/" target="_blank" rel="noopener" class="social-link">💼 LinkedIn</a>
         </div>
@@ -917,7 +917,7 @@
       const subject = document.getElementById('subject').value;
       const message = document.getElementById('message').value;
       const body = `Hi Mohamoud,\n\nMy name is ${name} (${email}).\n\n${message}`;
-      window.location.href = `mailto:mohamoud@example.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      window.location.href = `mailto:maxamudlaki12345@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
     }
   </script>
 </body>
