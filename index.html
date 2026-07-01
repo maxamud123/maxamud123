@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Mohamoud Abokor — Software Developer building clean, performant, and impactful applications." />
-  <meta property="og:title" content="Mohamoud Abokor — Software Developer" />
-  <meta property="og:description" content="Software Developer building clean, performant, and impactful applications." />
+  <meta name="description" content="Mohamoud Abokor — Network Engineer & Software Developer, CCNA certified, building clean, performant, and impactful applications and infrastructure." />
+  <meta property="og:title" content="Mohamoud Abokor — Network Engineer & Software Developer" />
+  <meta property="og:description" content="Network Engineer & Software Developer, CCNA certified, building clean, performant, and impactful applications and infrastructure." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://mohamoudabukar.netlify.app/" />
   <meta property="og:image" content="https://mohamoudabukar.netlify.app/about.jpg" />
@@ -13,15 +13,25 @@
   <meta name="theme-color" content="#0d1117" />
   <meta name="author" content="Mohamoud Abokor" />
   <link rel="canonical" href="https://mohamoudabukar.netlify.app/" />
-  <title>Mohamoud Abokor — Software Developer</title>
+  <title>Mohamoud Abokor — Network Engineer & Software Developer</title>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "Mohamoud Abokor",
-    "jobTitle": "Software Developer",
+    "jobTitle": "Network Engineer & Software Developer",
     "url": "https://mohamoudabukar.netlify.app/",
     "email": "mailto:maxamudlaki12345@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kigali",
+      "addressCountry": "Rwanda"
+    },
+    "hasCredential": {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "Cisco Certified Network Associate (CCNA)"
+    },
     "sameAs": [
       "https://github.com/maxamud123",
       "https://linkedin.com/in/mohamoud-abokor"
@@ -322,6 +332,33 @@
       letter-spacing: .1em; margin-top: .3rem;
     }
 
+    /* ─── EXPERIENCE ─── */
+    #experience { background: var(--bg); }
+
+    .timeline { display: flex; flex-direction: column; gap: 2rem; max-width: 720px; }
+
+    .timeline-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--accent);
+      border-radius: 12px;
+      padding: 1.5rem 1.75rem;
+    }
+
+    .timeline-head {
+      display: flex; justify-content: space-between; align-items: baseline;
+      flex-wrap: wrap; gap: .5rem; margin-bottom: .3rem;
+    }
+
+    .timeline-title { font-size: 1.05rem; font-weight: 800; letter-spacing: -.01em; }
+    .timeline-date {
+      font-size: .75rem; font-weight: 700; color: var(--accent);
+      text-transform: uppercase; letter-spacing: .08em;
+    }
+    .timeline-sub { color: var(--sub); font-size: .9rem; font-style: italic; margin-bottom: .8rem; }
+    .timeline-item ul { padding-left: 1.1rem; }
+    .timeline-item li { color: var(--sub); font-size: .9rem; line-height: 1.7; }
+
     /* ─── SKILLS ─── */
     #skills { background: var(--bg); }
 
@@ -566,6 +603,7 @@
     </div>
     <ul>
       <li><a href="#about">About</a></li>
+      <li><a href="#experience">Experience</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact" class="nav-cta">Hire Me</a></li>
@@ -578,6 +616,7 @@
   <!-- MOBILE NAV -->
   <div class="mobile-nav" id="mobileNav">
     <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#experience" onclick="closeMenu()">Experience</a>
     <a href="#skills" onclick="closeMenu()">Skills</a>
     <a href="#projects" onclick="closeMenu()">Projects</a>
     <a href="#contact" onclick="closeMenu()">Hire Me</a>
@@ -601,13 +640,13 @@
           <span id="typed-text"></span><span class="typed-cursor"></span>
         </div>
         <p class="hero-desc">
-          Clean code. Real impact. I craft high-performance applications
-          that solve real problems — from sleek UIs to robust back-end systems.
+          Clean code, reliable networks. CCNA-certified Network Engineer and
+          Software Developer building applications and infrastructure that solve real problems.
         </p>
         <div class="hero-btns">
           <a href="#projects" class="btn btn-accent">View My Work →</a>
           <a href="#contact" class="btn btn-ghost">Let's Talk</a>
-          <a href="Mohamud_Abukar_CV.pdf" download target="_blank" rel="noopener" class="btn btn-ghost">Download CV ↓</a>
+          <a href="Mohamoud_Abokor_CV.pdf" download target="_blank" rel="noopener" class="btn btn-ghost">Download CV ↓</a>
         </div>
       </div>
 
@@ -629,8 +668,8 @@
       </div>
       <div class="about-text reveal">
         <p>
-          I'm <strong>Mohamoud Abokor</strong>, a software developer who builds things that matter.
-          I care deeply about clean code, performance, and delivering real value.
+          I'm <strong>Mohamoud Abokor</strong>, a CCNA-certified Network Engineer and Software Developer
+          based in Kigali, Rwanda. I care deeply about clean code, reliable infrastructure, and delivering real value.
         </p>
         <p>
           Whether it's architecting a scalable back-end, building a pixel-perfect UI, or
@@ -642,7 +681,7 @@
         </p>
         <div class="about-actions">
           <a href="#contact" class="btn btn-accent">Hire Me →</a>
-          <a href="Mohamud_Abukar_CV.pdf" download target="_blank" rel="noopener" class="btn btn-ghost">Download CV</a>
+          <a href="Mohamoud_Abokor_CV.pdf" download target="_blank" rel="noopener" class="btn btn-ghost">Download CV</a>
         </div>
         <div class="about-stats">
           <div class="stat-card">
@@ -654,6 +693,50 @@
             <div class="stat-lbl">Yrs Exp.</div>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="reveal">
+      <div class="pill-label">The Journey</div>
+      <h2 class="section-title">Experience &amp; <span class="accent">Education.</span></h2>
+      <p class="section-sub">Grounded in real network infrastructure work, now building software on top of it.</p>
+    </div>
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <div class="timeline-head">
+          <span class="timeline-title">Telecommunication Intern</span>
+          <span class="timeline-date">2024</span>
+        </div>
+        <div class="timeline-sub">SOMTEL Telecom — Somaliland</div>
+        <ul>
+          <li>Configured and troubleshot network devices including routers, switches, and access points.</li>
+          <li>Installed and maintained telecommunication equipment across multiple sites.</li>
+          <li>Monitored network performance using diagnostic tools and escalated anomalies to senior engineers.</li>
+        </ul>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-head">
+          <span class="timeline-title">Cisco Certified Network Associate (CCNA)</span>
+          <span class="timeline-date">2024</span>
+        </div>
+        <div class="timeline-sub">Issued by Cisco Systems</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-head">
+          <span class="timeline-title">M.Sc. — Internet Systems</span>
+          <span class="timeline-date">2024 – Present</span>
+        </div>
+        <div class="timeline-sub">Kigali Independent University (ULK) — Kigali, Rwanda · Year 2, writing thesis</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-head">
+          <span class="timeline-title">B.Sc. — Electronic &amp; Telecommunication Engineering</span>
+          <span class="timeline-date">2020 – 2024</span>
+        </div>
+        <div class="timeline-sub">Amoud University — Borama, Somaliland</div>
       </div>
     </div>
   </section>
@@ -800,6 +883,7 @@
           <a href="mailto:maxamudlaki12345@gmail.com" class="social-link">📧 maxamudlaki12345@gmail.com</a>
           <a href="https://github.com/maxamud123" target="_blank" rel="noopener" class="social-link">🐙 GitHub</a>
           <a href="https://linkedin.com/in/mohamoud-abokor" target="_blank" rel="noopener" class="social-link">💼 LinkedIn</a>
+          <div class="social-link" style="cursor:default;">📍 Kigali, Rwanda</div>
         </div>
       </div>
 
@@ -849,7 +933,7 @@
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // ── TYPING ──
-    const roles = ['Software Developer', 'Frontend Developer', 'Full-Stack Engineer', 'Problem Solver'];
+    const roles = ['Software Developer', 'Network Engineer', 'Full-Stack Engineer', 'Problem Solver'];
     let rIdx = 0, cIdx = 0, del = false;
     const el = document.getElementById('typed-text');
     function type() {
@@ -862,6 +946,10 @@
 
     // ── SKILLS ──
     const skills = [
+      { icon: '🌐', name: 'Network Engineering' },
+      { icon: '🎓', name: 'CCNA' },
+      { icon: '🔀', name: 'TCP/IP & Routing' },
+      { icon: '🐧', name: 'Linux Administration' },
       { icon: '⚛️', name: 'React' },
       { icon: '🟨', name: 'JavaScript' },
       { icon: '🔷', name: 'TypeScript' },
