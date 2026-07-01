@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "Mohamoud Abokor — Software Developer portfolio",
   "main": "server.js",
+  "author": "Mohamoud Abokor",
+  "license": "MIT",
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js"
