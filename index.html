@@ -382,7 +382,6 @@
     .project-banner {
       height: 150px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 3.5rem;
       position: relative; overflow: hidden;
     }
     .project-banner::before {
@@ -391,7 +390,12 @@
       background-image: radial-gradient(rgba(255,255,255,0.08) 1px, transparent 1px);
       background-size: 16px 16px;
     }
-    .project-banner span { position: relative; z-index: 1; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4)); }
+    .project-banner svg {
+      position: relative; z-index: 1;
+      width: 56px; height: 56px;
+      color: var(--accent);
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4));
+    }
 
     .project-body { padding: 1.5rem; }
 
@@ -694,7 +698,21 @@
     <div class="projects-grid">
 
       <div class="project-card reveal">
-        <div class="project-banner" style="background:linear-gradient(135deg,#0d1a2e,#0a1f0a);"><span>⚡</span></div>
+        <div class="project-banner" style="background:linear-gradient(135deg,#0d1a2e,#0a1f0a);" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="32" cy="32" r="6" />
+            <circle cx="32" cy="10" r="4" />
+            <circle cx="12" cy="24" r="4" />
+            <circle cx="52" cy="24" r="4" />
+            <circle cx="18" cy="52" r="4" />
+            <circle cx="46" cy="52" r="4" />
+            <line x1="32" y1="18" x2="32" y2="26" />
+            <line x1="27" y1="28" x2="16" y2="26" />
+            <line x1="37" y1="28" x2="48" y2="26" />
+            <line x1="28" y1="37" x2="20" y2="48" />
+            <line x1="36" y1="37" x2="44" y2="48" />
+          </svg>
+        </div>
         <div class="project-body">
           <div class="project-tags">
             <span class="tag">Python</span>
@@ -710,7 +728,15 @@
       </div>
 
       <div class="project-card reveal">
-        <div class="project-banner" style="background:linear-gradient(135deg,#1a2235,#2a1a0d);"><span>☕</span></div>
+        <div class="project-banner" style="background:linear-gradient(135deg,#1a2235,#2a1a0d);" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14 26h28v14a10 10 0 0 1-10 10H24a10 10 0 0 1-10-10V26z" />
+            <path d="M42 30h4a6 6 0 0 1 0 12h-4" />
+            <path d="M22 20c0-3 3-3 3-6s-3-3-3-6" />
+            <path d="M32 20c0-3 3-3 3-6s-3-3-3-6" />
+            <line x1="10" y1="52" x2="38" y2="52" />
+          </svg>
+        </div>
         <div class="project-body">
           <div class="project-tags">
             <span class="tag">TypeScript</span>
@@ -726,7 +752,12 @@
       </div>
 
       <div class="project-card reveal">
-        <div class="project-banner" style="background:linear-gradient(135deg,#1a2235,#1a1535);"><span>🛡️</span></div>
+        <div class="project-banner" style="background:linear-gradient(135deg,#1a2235,#1a1535);" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M32 8l18 6v14c0 13-8 21-18 28-10-7-18-15-18-28V14z" />
+            <path d="M23 32l6 6 12-12" />
+          </svg>
+        </div>
         <div class="project-body">
           <div class="project-tags">
             <span class="tag">TypeScript</span>
@@ -742,7 +773,16 @@
       </div>
 
       <div class="project-card reveal">
-        <div class="project-banner" style="background:linear-gradient(135deg,#1a2235,#0d2137);"><span>🚦</span></div>
+        <div class="project-banner" style="background:linear-gradient(135deg,#1a2235,#0d2137);" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="22" y="6" width="20" height="38" rx="6" />
+            <circle cx="32" cy="15" r="3.2" fill="currentColor" stroke="none" />
+            <circle cx="32" cy="25" r="3.2" />
+            <circle cx="32" cy="35" r="3.2" />
+            <line x1="32" y1="44" x2="32" y2="52" />
+            <line x1="18" y1="58" x2="46" y2="58" />
+          </svg>
+        </div>
         <div class="project-body">
           <div class="project-tags">
             <span class="tag">TypeScript</span>
