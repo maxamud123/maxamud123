@@ -299,8 +299,9 @@
     .about-actions { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
 
     .about-stats {
-      display: grid; grid-template-columns: repeat(3, 1fr);
+      display: grid; grid-template-columns: repeat(2, 1fr);
       gap: 1rem; margin-top: 2.5rem;
+      max-width: 320px;
     }
 
     .stat-card {
@@ -325,37 +326,21 @@
     #skills { background: var(--bg); }
 
     .skills-grid {
-      display: grid; grid-template-columns: repeat(2, 1fr);
-      gap: 1rem 4rem;
+      display: flex; flex-wrap: wrap; gap: .8rem;
     }
 
-    .skill-item { display: flex; flex-direction: column; gap: .55rem; }
-
-    .skill-header {
-      display: flex; justify-content: space-between; align-items: center;
-    }
-
-    .skill-name-wrap {
+    .skill-item {
       display: flex; align-items: center; gap: .6rem;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: .75rem 1.1rem;
       font-size: .9rem; font-weight: 700;
+      transition: border-color .2s, background .2s;
     }
+    .skill-item:hover { border-color: var(--accent-border); background: var(--accent-dim); }
 
-    .skill-icon { font-size: 1.1rem; }
-
-    .skill-pct {
-      font-size: .78rem; font-weight: 700; color: var(--accent);
-    }
-
-    .skill-bar-bg {
-      height: 4px; background: rgba(255,255,255,0.06);
-      border-radius: 999px; overflow: hidden;
-    }
-
-    .skill-bar-fill {
-      height: 100%; border-radius: 999px;
-      width: 0%; background: var(--accent);
-      transition: width 1.3s cubic-bezier(.25,.46,.45,.94);
-    }
+    .skill-icon { font-size: 1.15rem; }
 
     /* ─── PROJECTS ─── */
     #projects { background: var(--bg2); }
@@ -554,7 +539,6 @@
       h1 { letter-spacing: -.03em; }
       .about-grid { grid-template-columns: 1fr; gap: 3rem; }
       .about-photo-wrap { max-width: 280px; margin: 0 auto; }
-      .skills-grid { grid-template-columns: 1fr; }
       .form-row { grid-template-columns: 1fr; }
       section { padding: 5rem 6%; }
       .hero-btns { flex-direction: column; }
@@ -668,10 +652,6 @@
           <div class="stat-card">
             <div class="stat-val">2+</div>
             <div class="stat-lbl">Yrs Exp.</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-val">∞</div>
-            <div class="stat-lbl">Curiosity</div>
           </div>
         </div>
       </div>
@@ -882,41 +862,32 @@
 
     // ── SKILLS ──
     const skills = [
-      { icon: '⚛️', name: 'React',          pct: 90 },
-      { icon: '🟨', name: 'JavaScript',     pct: 92 },
-      { icon: '🔷', name: 'TypeScript',     pct: 75 },
-      { icon: '🐍', name: 'Python',         pct: 70 },
-      { icon: '🟢', name: 'Node.js',        pct: 72 },
-      { icon: '🎨', name: 'CSS / Tailwind', pct: 88 },
-      { icon: '🛢️', name: 'SQL',            pct: 68 },
-      { icon: '🐳', name: 'Docker',         pct: 45 },
-      { icon: '🐙', name: 'Git / GitHub',   pct: 88 },
-      { icon: '☁️', name: 'Cloud / AWS',    pct: 40 },
-      { icon: '🔧', name: 'REST APIs',      pct: 85 },
-      { icon: '📱', name: 'Responsive UI',  pct: 92 },
+      { icon: '⚛️', name: 'React' },
+      { icon: '🟨', name: 'JavaScript' },
+      { icon: '🔷', name: 'TypeScript' },
+      { icon: '🐍', name: 'Python' },
+      { icon: '🟢', name: 'Node.js' },
+      { icon: '🎨', name: 'CSS / Tailwind' },
+      { icon: '🛢️', name: 'SQL' },
+      { icon: '🐳', name: 'Docker' },
+      { icon: '🐙', name: 'Git / GitHub' },
+      { icon: '☁️', name: 'Cloud / AWS' },
+      { icon: '🔧', name: 'REST APIs' },
+      { icon: '📱', name: 'Responsive UI' },
     ];
     const grid = document.getElementById('skillsGrid');
     skills.forEach(s => {
       grid.innerHTML += `
         <div class="skill-item">
-          <div class="skill-header">
-            <div class="skill-name-wrap"><span class="skill-icon">${s.icon}</span><span>${s.name}</span></div>
-            <span class="skill-pct">${s.pct}%</span>
-          </div>
-          <div class="skill-bar-bg"><div class="skill-bar-fill" data-pct="${s.pct}"></div></div>
+          <span class="skill-icon">${s.icon}</span><span>${s.name}</span>
         </div>`;
     });
 
     // ── SCROLL REVEAL ──
-    let barsAnimated = false;
     const observer = new IntersectionObserver(entries => {
       entries.forEach(e => {
         if (!e.isIntersecting) return;
         e.target.classList.add('visible');
-        if ((e.target.id === 'skillsGrid' || e.target.closest && e.target.closest('#skills')) && !barsAnimated) {
-          barsAnimated = true;
-          document.querySelectorAll('.skill-bar-fill').forEach(b => { b.style.width = b.dataset.pct + '%'; });
-        }
         observer.unobserve(e.target);
       });
     }, { threshold: 0.1 });
