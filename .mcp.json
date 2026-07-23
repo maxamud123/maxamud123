@@ -1,8 +1,0 @@
-{
-  "mcpServers": {
-    "toolbox": {
-      "command": "toolbox",
-      "args": ["--stdio", "--config", "toolbox/tools.yaml"]
-    }
-  }
-}
