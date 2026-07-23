@@ -1,0 +1,23 @@
+# MCP Toolbox for Databases configuration
+# Docs: https://googleapis.github.io/genai-toolbox/getting-started/configure/
+# Define your database sources and tools here. Example:
+#
+# sources:
+#   my-pg-source:
+#     kind: postgres
+#     host: 127.0.0.1
+#     port: 5432
+#     database: mydb
+#     user: myuser
+#     password: my-password   # supports env substitution: $ {DB_PASSWORD} (without the space)
+#
+# tools:
+#   search-rows:
+#     kind: postgres-sql
+#     source: my-pg-source
+#     description: Search rows in my table.
+#     statement: SELECT * FROM mytable LIMIT 10;
+#
+# toolsets:
+#   my-toolset:
+#     - search-rows
